@@ -12,4 +12,4 @@ function formatAs12HourClock(time){
     }
 }
 export{formatAs12HourClock};
-// console.log(formatAs12HourClock("12:00"))
+// console.log(formatAs12HourClock("25:00"))
