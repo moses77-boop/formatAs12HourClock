@@ -7,4 +7,5 @@ function formatAs12HourClock(time){
         return `${hours} am`;
     }
 }
-console.log(formatAs12HourClock("12:00"))
+export{formatAs12HourClock};
+// console.log(formatAs12HourClock("12:00"))
