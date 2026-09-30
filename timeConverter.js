@@ -4,6 +4,7 @@ function formatAs12HourClock(time){
         return `${hours - 12}:00 pm`;
     }
     else{
-        return `${hours}:00 am`;
+        return `${hours} am`;
     }
 }
+console.log(formatAs12HourClock("12:00"))
