@@ -1,15 +1,18 @@
-function formatAs12HourClock(time){
-    const hours = Number(time.slice(0, 2));
+function formatAs12HourClock(time) {
+  const [hoursString, minutesString = "00"] = time.split(":");
+  let hours = Number(hoursString);
+  const minutes = minutesString;
+  const isPM = hours >= 12;
 
-    if(time === "00:00"){
-        return `12:00 am`;
-    }
-    if(hours > 12){
-        return `${hours - 12}:00 pm`;
-    }
-    else{
-        return `${time} am`;
-    }
+  if (hours === 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours -= 12;
+  }
+
+  const formattedHour = String(hours).padStart(2, "0");
+
+  return `${formattedHour}:${minutes} ${isPM ? "pm" : "am"}`;
 }
-export{formatAs12HourClock};
-// console.log(formatAs12HourClock("25:00"))
+
+export { formatAs12HourClock };
